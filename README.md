@@ -1,2 +1,11 @@
-# first-api-nestjs
-API feita com NestJS
+## First API using NestJS
+
+```
+npm install
+```
+
+```
+npm run start:dev
+```
+
+http://localhost:3000
