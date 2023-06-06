@@ -1,27 +1,33 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Param, Controller, Get, Post } from '@nestjs/common';
 
-import { CreateTeamMemberBody } from './dtos/craete-team-member-body';
+import { CreateUserBody } from './dtos/craete-user-body';
 
-import { RocketMembersRepository } from './repositories/rocket-members-repository';
+import { UserRepository } from './repositories/user-repository';
 
 @Controller('users')
 export class AppController {
-  constructor(private rocketMembersRepository: RocketMembersRepository) {}
+  constructor(private userRepository: UserRepository) {}
+
+  @Post('/create')
+  async createUser(@Body() body: CreateUserBody) {
+    const { name, function: memberFunction } = body;
+
+    // Acces by prisma repository
+    const user = await this.userRepository.create(name, memberFunction);
+
+    return user;
+  }
 
   @Get()
   async getAllUsers() {
-    // Acces by repository
-    const users = await this.rocketMembersRepository.getAllUsers();
+    const users = await this.userRepository.getAllUsers();
 
     return users;
   }
 
-  @Post('/create')
-  async createUser(@Body() body: CreateTeamMemberBody) {
-    const { name, function: memberFunction } = body;
-
-    // Acces by repository
-    const user = await this.rocketMembersRepository.create(name, memberFunction);
+  @Get('/:id')
+  async getUserById(@Param('id') id: string) {
+    const user = await this.userRepository.getUserById(id);
 
     return user;
   }

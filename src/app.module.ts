@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { PrismaService } from './database/prisma.service';
-import { RocketMembersRepository } from './repositories/rocket-members-repository';
-import { PrismaRocketMembersRepository } from './repositories/prisma/prisma-rocket-members-repository';
+import { UserRepository } from './repositories/user-repository';
+import { PrismaUserRepository } from './repositories/prisma/prisma-user-repository';
 
 @Module({
   imports: [],
@@ -10,8 +10,8 @@ import { PrismaRocketMembersRepository } from './repositories/prisma/prisma-rock
   providers: [
     PrismaService,
     {
-      provide: RocketMembersRepository,
-      useClass: PrismaRocketMembersRepository,
+      provide: UserRepository,
+      useClass: PrismaUserRepository,
     },
   ],
 })

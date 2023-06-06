@@ -10,8 +10,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model RocketTeamMember {
-  id       String @id
+model User {
+  id       Int    @id @default(autoincrement())
   name     String
   function String
 }
