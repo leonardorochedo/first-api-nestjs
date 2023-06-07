@@ -23,7 +23,7 @@ describe('AppController (e2e)', () => {
 
   it('/users (GET)', () => {
     // First create a User
-    const user = { name: 'John Doe', description: 'Developer' };
+    const user = { name: 'Leonardo Rochedo', description: 'Desenvolvedor' };
   
     return request(app.getHttpServer())
       .post('/users/create')
@@ -47,7 +47,7 @@ describe('AppController (e2e)', () => {
 
   it('/users/:id (GET)', () => {
     // First create a User
-    const user = { name: 'John Doe', description: 'Developer' };
+    const user = { name: 'Leonardo Rochedo', description: 'Desenvolvedor' };
 
     return request(app.getHttpServer())
       .post('/users/create')
@@ -70,7 +70,7 @@ describe('AppController (e2e)', () => {
 
   it('/users/delete/:id (DELETE)', () => {
     // First create a User
-    const user = { name: 'John Doe', description: 'Developer' };
+    const user = { name: 'Leonardo Rochedo', description: 'Desenvolvedor' };
   
     return request(app.getHttpServer())
       .post('/users/create')
@@ -93,7 +93,7 @@ describe('AppController (e2e)', () => {
 
   it('/users/create (POST)', () => {
     // First create a User
-    const user = { name: 'John Doe', description: 'Developer' };
+    const user = { name: 'Leonardo Rochedo', description: 'Desenvolvedor' };
 
     return request(app.getHttpServer())
       .post('/users/create')
@@ -107,7 +107,7 @@ describe('AppController (e2e)', () => {
 
   it('/users/edit/:id (PATCH)', () => {
     // First create a User
-    const user = { name: 'John Doe', description: 'Developer' };
+    const user = { name: 'Leonardo Rochedo', description: 'Desenvolvedor' };
 
     return request(app.getHttpServer())
       .post('/users/create')
@@ -117,7 +117,7 @@ describe('AppController (e2e)', () => {
         const userId = res.body.id;
 
         // Next, make a request to /delete/:id with userID in param and body contains new data
-        const updatedUser = { name: 'Jane Doe', description: 'Designer' };
+        const updatedUser = { name: 'Leonardo Ferreira', description: 'Designer' };
 
         return request(app.getHttpServer())
           .patch(`/users/edit/${userId}`)
