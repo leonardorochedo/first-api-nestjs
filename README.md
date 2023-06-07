@@ -2,11 +2,16 @@
 
 Minha primeira API criada com NestJS.
 
+## Projeto
+
+Gostei muito de desenvolver minha primeira API em NestJS e implementar testes com Jest, foi uma experiência marcante. A estrutura e a organização do NestJS facilitam o desenvolvimento da API de forma eficiente. Foi minha primeira vez utilizando essas tecnologias e gostei muito do resultado, por mais que ficou bem simples.
+
 ## Tecnologias utilizadas
 
 - NestJS: um framework em Node.js para construção de aplicativos escaláveis e eficientes.
 - Prisma: uma ferramenta de ORM (Object-Relational Mapping) para trabalhar com bancos de dados SQL e NoSQL.
 - Banco de dados: SQLite, utilizado pelo Prisma para armazenar os dados da aplicação.
+- Jest: Para testes e2e (end-to-end).
 - Class-Validator: Com esta biblioteca consigo definir regras de validação de forma declarativa utilizando decorators, o que tornou o código mais limpo e intuitivo.
 
 ## Endpoints da API
@@ -57,6 +62,18 @@ npx prisma studio
 
 Após executar essas etapas, o servidor estará em execução localmente na URL *ttp://localhost:3000* e você poderá acessar os endpoints da API mencionados anteriormente.
 
-Divirta-se explorando sua primeira API NestJS!
+## Testes
+
+Foram implementados testes e2e (end-to-end) para os endpoints da API, meus primeiros teste na realidade. 
+
+Os testes garantem o correto funcionamento das rotas e a integração com o banco de dados.
+
+Para executar os teste na aplicação apenas execute o comando abaixo:
+
+```shell
+npm run test:e2e
+```
+
+E irá listar no console os testes e se cada um passou ou falhou.
 
 **Observação:** Certifique-se de ter o banco de dados SQLite configurado corretamente. Verifique a documentação do Prisma para mais informações sobre como configurar o banco de dados.
