@@ -48,13 +48,19 @@ cd first-api-nestjs
 npm install
 ```
 
-5. Execute o projeto:
+5. Execute os testes (e2e):
 
 ```shell
-npm run start:dev
+npm run test:e2e
 ```
 
-6. Abra o Prisma Studio:
+6. Execute o projeto:
+
+```shell
+npm run start
+```
+
+7. Abra o Prisma Studio:
 
 ```shell
 npx prisma studio
