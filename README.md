@@ -8,8 +8,8 @@ Gostei muito de desenvolver minha primeira API em NestJS e implementar testes co
 
 ## Tecnologias utilizadas
 
-- NestJS: um framework em Node.js para construção de aplicativos escaláveis e eficientes.
-- Prisma: uma ferramenta de ORM (Object-Relational Mapping) para trabalhar com bancos de dados SQL e NoSQL.
+- NestJS: Framework em Node.js para construção de aplicativos escaláveis e eficientes.
+- Prisma: Ferramenta ORM (Object-Relational Mapping) para trabalhar com bancos de dados SQL e NoSQL.
 - Banco de dados: SQLite, utilizado pelo Prisma para armazenar os dados da aplicação.
 - Jest: Para testes e2e (end-to-end).
 - Class-Validator: Com esta biblioteca consigo definir regras de validação de forma declarativa utilizando decorators, o que tornou o código mais limpo e intuitivo.
@@ -33,7 +33,7 @@ Para executar o projeto localmente em sua máquina, siga as etapas abaixo:
 2. Clone este repositório em um diretório de sua escolha:
 
 ```shell
-git clone https://github.com/seu-usuario/first-api-nestjs.git
+git clone https://github.com/leonardorochedo/first-api-nestjs.git
 ```
 
 3. Acesse o diretório do projeto:
@@ -73,13 +73,5 @@ Após executar essas etapas, o servidor estará em execução localmente na URL 
 Foram implementados testes e2e (end-to-end) para os endpoints da API, meus primeiros teste na realidade. 
 
 Os testes garantem o correto funcionamento das rotas e a integração com o banco de dados.
-
-Para executar os teste na aplicação apenas execute o comando abaixo:
-
-```shell
-npm run test:e2e
-```
-
-E irá listar no console os testes e se cada um passou ou falhou.
 
 **Observação:** Certifique-se de ter o banco de dados SQLite configurado corretamente. Verifique a documentação do Prisma para mais informações sobre como configurar o banco de dados.
